@@ -8,7 +8,8 @@ import React from "react";
 
 const { Content, Sider } = Layout;
 
-export const Home = () => {
+export const Home = (props) => {
+  const {fname} = props;
   const { startGame, getCard, deck_id, cards, cardsHistory } = useHome();
   React.useEffect(() => {
     startGame();
@@ -38,7 +39,7 @@ export const Home = () => {
           <div className="profile">
             <Avatar className="profile-img" />
             <div className="profile-info">
-              <p className="name">brian</p>
+              <p className="name">{fname}</p>
               <p className="caption">Free account</p>
             </div>
           </div>
@@ -47,7 +48,7 @@ export const Home = () => {
       <Layout className="site-layout">
         <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
           <div className="heading">
-            <h5>Hi BRIAN,</h5>
+            <h5>Hi <span>{fname}</span>,</h5>
             <h2>Let's Play!</h2>
           </div>
           <div className="cards">
