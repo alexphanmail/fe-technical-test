@@ -20,9 +20,9 @@ export const Home = (props) => {
       <Sider
         className="left-sider"
         theme="light"
-        width={256}
+        width={null}
         breakpoint="md"
-        collapsedWidth="100%"
+        collapsedWidth="null"
       >
         <div className="flex">
           <div className="logo">

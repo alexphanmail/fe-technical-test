@@ -1,7 +1,22 @@
 .ant-layout {
-  @media (max-width: 1023px) {
-    display: flex;
-    flex-direction: column !important;
+  &.ant-layout-has-sider {
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
+
+    > .ant-layout,
+    > .ant-layout-content {
+      @media (max-width: 1023px) {
+        margin-left: 0;
+        width: 100%;
+
+        padding: 22px 42px;
+
+        .cards {
+          padding: 20px 0 35px;
+        }
+      }
+    }
   }
 }
 
@@ -82,8 +97,9 @@
 
   @media (max-width: 1023px) {
     position: relative;
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
     justify-content: center;
     align-items: center;
 
@@ -190,17 +206,6 @@
       border-radius: 16px;
     }
   }
-
-  @media (max-width: 1023px) {
-    margin-left: 0;
-    width: 100% !important;
-
-    padding: 22px 42px;
-
-    .cards {
-      padding: 20px 0 35px;
-    }
-  }
 }
 
 .right-sider {
@@ -260,7 +265,7 @@
 
   @media (max-width: 1023px) {
     .ant-layout-sider-children {
-      width: 100% !important;
+      width: 100%;
     }
 
     .flex {
