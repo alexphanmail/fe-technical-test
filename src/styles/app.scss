@@ -1,0 +1,268 @@
+.ant-layout {
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+.left-sider {
+  border-right: 1px solid #e4e4e4;
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .logo {
+    padding: 64px 40px 32px 40px;
+  }
+
+  .expandable {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 1;
+
+    .header {
+      font-size: 12px;
+      font-weight: 500;
+      color: #808191;
+      padding: 0 20px;
+    }
+
+    button {
+      background-color: #6c5dd3;
+      color: white;
+      border-radius: 12px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      height: auto;
+
+      .ant-image {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    .profile-img {
+      margin-right: 16px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .profile-info {
+      p {
+        margin: 0;
+      }
+      .name {
+        color: #11142d;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+
+      .caption {
+        color: #808191;
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center;
+    align-items: center;
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      flex-grow: 1;
+      padding: 40px 20px;
+    }
+
+    .expandable {
+      justify-content: center;
+      order: 3;
+      flex-basis: 100%;
+    }
+    .profile {
+      padding: 20px;
+      align-items: center;
+      flex-grow: 1;
+    }
+  }
+}
+
+.site-layout {
+  margin-left: 256px;
+
+  background-color: white;
+  padding: 48px 65px;
+  .heading {
+    h5 {
+      margin: 0;
+      font-size: 24px;
+      color: #11142d;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #11142d;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 52px 0 77px;
+    .stack-cards {
+      position: relative;
+      width: 226px;
+      height: 344px;
+      display: flex;
+      justify-content: center;
+    }
+    .first-card {
+      background-color: #6c5dd3;
+      width: 226px;
+      height: 314px;
+      border-radius: 24px;
+      position: absolute;
+      z-index: 9;
+    }
+
+    .hidden-card-1 {
+      position: absolute;
+      background-color: #cfc8ff;
+      bottom: 20px;
+      width: 216px;
+      height: 314px;
+      border-radius: 24px;
+      z-index: 8;
+    }
+
+    .hidden-card-2 {
+      position: absolute;
+      background-color: #cfc8ff;
+      bottom: 12px;
+      width: 205px;
+      height: 314px;
+      border-radius: 24px;
+      z-index: 7;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+
+    button {
+      background-color: #11142d;
+      color: white;
+      height: auto;
+      padding: 18px;
+      width: 300px;
+      border-radius: 16px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    margin-left: 0;
+    width: 100% !important;
+
+    padding: 22px 42px;
+
+    .cards {
+      padding: 20px 0 35px;
+    }
+  }
+}
+
+.right-sider {
+  width: 426px;
+  height: 100vh;
+  border-left: 1px solid #e4e4e4;
+  .flex {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    padding: 0 60px;
+  }
+  .list-cards {
+    border-radius: 24px;
+    box-shadow: 0 20px 50px #e3e6ec;
+    width: 100%;
+
+    .card {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 16px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 50px #e3e6ec;
+      }
+      .card-img {
+        width: 56px;
+        border-radius: 16px;
+        margin-right: 10px;
+      }
+      .card-info {
+        width: calc(100% - 56px);
+        .title {
+          font-size: 16px;
+          font-weight: 600;
+          color: #11142d;
+          display: flex;
+          justify-content: space-between;
+          .card-more {
+            margin-left: 33px;
+          }
+        }
+        p {
+          margin: 0;
+
+          &.caption {
+            font-size: 13px;
+            font-weight: 600;
+            color: #808191;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .ant-layout-sider-children {
+      width: 100% !important;
+    }
+
+    .flex {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}
