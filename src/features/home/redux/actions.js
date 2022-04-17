@@ -36,7 +36,7 @@ export function getCard(deck_id, cardsHistory) {
 
         cardsHistory.push({
           ...res.data.cards[0],
-          timestamp: moment(timestamp).format("YYYY-MM-DD HH:mm:ss"),
+          timestamp: moment(timestamp).format("MM/DD/YYYY HH:mm"),
         });
       }
 
